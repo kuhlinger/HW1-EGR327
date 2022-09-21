@@ -1,17 +1,19 @@
 class Truck extends Vehicle
 {
+    // create variables for the side step and towing capacity
     private boolean hasStep;
     private double tow;
 
-    //constructor
-    public Truck(String make, String model, int year, boolean fwd, float price, int mileage, boolean hasStep, double tow)
-    {
+    // constructor that adds boolean if there is a side step and the int towing capacity
+    public Truck(String make, String model, int year, boolean fwd, int price, int mileage, boolean hasStep, int tow) {
+
         super(make, model, year, fwd, price, mileage);
         this.hasStep = hasStep;
         this.tow = tow;
     }
 
     //getters and setters
+
     public boolean isHasStep() {
         return hasStep;
     }
@@ -20,17 +22,17 @@ class Truck extends Vehicle
         this.hasStep = hasStep;
     }
 
-    public double getTow() {
-        return tow;
+    public int getTow() {
+        return (int) tow;
     }
 
-    public void setTow(double tow) {
+    public void setTow(int tow) {
         this.tow = tow;
     }
 
-    //print method
-    public String printVehicle()
-    {
+    // method that prints the vehicle info with side step and towing capacity addition
+    public String printVehicle() {
+
         System.out.println(this.getYear()+" "+this.getMake()+" "+this.getMake());
         if(this.isFwd())
             System.out.println("4WD");
